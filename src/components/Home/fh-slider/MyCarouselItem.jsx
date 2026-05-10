@@ -3,7 +3,6 @@ import MyButtonSlider from "./MyButtonCarousel"
 import { useEffect, useState } from "react"
 
 const MyCarouselItem = function (props) {
-  console.log(props)
   const [logo, setLogo] = useState("")
   const Auth =
     "Bearer " + import.meta.env.VITE_API_KEY
