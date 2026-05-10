@@ -6,7 +6,6 @@ const MyCarouselItem = function (props) {
   const [logo, setLogo] = useState("")
   const Auth =
     "Bearer " + import.meta.env.VITE_API_KEY
-
   const options = {
     headers: {
       Authorization: Auth,
@@ -66,6 +65,7 @@ const MyCarouselItem = function (props) {
             text="Play"
           />
           <MyButtonSlider
+            movieObj={props.infoMedia}
             btnClass={buttonClass}
             variant="secondary"
             icon="fa-solid fa-circle-info"
