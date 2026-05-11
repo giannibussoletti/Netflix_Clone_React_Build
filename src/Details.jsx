@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Col, Container, Row, Image, Button } from "react-bootstrap"
-import { useParams } from "react-router"
+import { useLocation, useParams } from "react-router"
 import DetailsPlaceholder from "./DetailsPlaceholder"
 
 const Details = function () {
@@ -8,7 +8,7 @@ const Details = function () {
   const [mediaLogo, setMediaLogo] = useState({})
   const [isData, setIsData] = useState(false)
   const params = useParams()
-
+  const location = useLocation()
   const Auth =
     "Bearer " + import.meta.env.VITE_API_KEY
 
@@ -63,6 +63,12 @@ const Details = function () {
     MultiFetching()
     LogosFetching()
   }, [])
+
+  useEffect(() => {
+    MultiFetching()
+    LogosFetching()
+  }, [location.pathname])
+
   if (!isData) {
     return <DetailsPlaceholder />
   }
