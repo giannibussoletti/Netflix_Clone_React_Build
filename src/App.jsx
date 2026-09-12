@@ -31,8 +31,7 @@ const App = () => {
   const [secondSpinner, setSecondSpinner] = useState(true)
   const [thirdSpinner, setThirdSpinner] = useState(true)
 
-  const Auth =
-    "Bearer " + import.meta.env.VITE_API_KEY
+  const Auth = "Bearer " + import.meta.env.VITE_API_KEY
 
   const options = {
     headers: {

@@ -4,8 +4,7 @@ import { useEffect, useState } from "react"
 
 const MyCarouselItem = function (props) {
   const [logo, setLogo] = useState("")
-  const Auth =
-    "Bearer " + import.meta.env.VITE_API_KEY
+  const Auth = "Bearer " + import.meta.env.VITE_API_KEY
   const options = {
     headers: {
       Authorization: Auth,

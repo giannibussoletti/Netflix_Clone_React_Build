@@ -9,8 +9,7 @@ const Details = function () {
   const [isData, setIsData] = useState(false)
   const params = useParams()
   const location = useLocation()
-  const Auth =
-    "Bearer " + import.meta.env.VITE_API_KEY
+  const Auth = "Bearer " + import.meta.env.VITE_API_KEY
 
   const options = {
     headers: {
@@ -62,11 +61,13 @@ const Details = function () {
   useEffect(() => {
     MultiFetching()
     LogosFetching()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     MultiFetching()
     LogosFetching()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname])
 
   if (!isData) {
